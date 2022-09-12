@@ -1,0 +1,334 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    font-style: none;
+    text-align: justify;
+}
+
+body {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 500px;
+    background-image: url(../imagens/wq.jpg);
+    margin: 0;
+    padding: 0;
+
+}
+
+nav {
+
+    box-shadow: 3px 10px 80px #23232e;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #23232ede;
+    height: 11vh;
+    text-decoration: none;
+    list-style: none;
+    padding-top: 20px;
+}
+
+a {
+    padding-top: 20px;
+    text-decoration: none;
+    position: relative;
+    padding: 10px 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+    overflow: hidden;
+
+    list-style: none;
+
+}
+
+a:hover {
+    background: var(--clr);
+    box-shadow: 0 0 10px var(--clr),
+        0 0 30px var(--clr),
+        0 0 60px var(--clr),
+        0 0 100px var(--clr);
+}
+
+a::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 400%;
+    background: var(--clr);
+    transition: 1s;
+    animation: animate 2s linear infinite;
+    animation-delay: calc(0.33s * var(--i));
+}
+
+a:hover::before {
+    width: 120%;
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+a::after {
+    content: '';
+    position: absolute;
+    inset: 3px;
+    background: #23232e;
+    transition: 0.5s;
+}
+
+a:hover::after {
+    background: var(--clr);
+}
+
+a span {
+    position: relative;
+    z-index: 1;
+    font-size: 1.2em;
+    color: ghostwhite;
+    opacity: 0.5;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    transition: 0.5s;
+    text-decoration: none;
+    font-style: none;
+
+}
+
+a:hover span {
+    opacity: 1;
+}
+
+.nav-list {
+    box-shadow: 3px 10px 80px #23232e;
+    text-decoration: none;
+    font-size: 15px;
+    list-style: none;
+    display: flex;
+    color: #be7abb;
+}
+
+.nav-list li {
+    text-decoration: none;
+    letter-spacing: 3px;
+    margin-left: 30px;
+}
+
+.teste li a {
+    font-style: none;
+    text-decoration: none;
+    list-style: none;
+}
+
+.pad {
+    margin-left: 200px;
+    padding: 5px;
+}
+
+.center {
+    background-color: #23232e;
+    box-shadow: 5px 10px 40px #be7abb;
+    color: #be7abb;
+    box-shadow: 3px 10px 60px #23232e;
+}
+
+p {
+    font-size: large;
+    justify-content: center;
+    text-align: center;
+}
+
+.card-menu {
+    height: 80vh;
+    width: 95%;
+    max-width: 700px;
+    margin: auto;
+    letter-spacing: 2px;
+    box-shadow: 0px 10px 50px #23232e;
+    background: #23232ed9;
+    padding: 5px 40px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    border-radius: 10px;
+}
+
+span {
+    color: #adadad;
+}
+
+form .tf {
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin: 30px 0;
+}
+
+.tf input {
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+    color: #adadad;
+}
+
+.tf label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: #adadad;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.tf span::before {
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    height: 1.5px;
+    background: aqua;
+    transition: .5s;
+}
+
+.tf input:focus~label,
+.tf input:valid~label {
+    top: -5px;
+    color: aqua;
+}
+
+.tf input:focus~span::before,
+.tf input:valid~span::before {
+    width: 100%;
+}
+
+.button {
+    cursor: pointer;
+    width: 80%;
+    height: 50px;
+    border: 1px solid;
+    background: aqua;
+    box-shadow: 3px 8px 30px aqua;
+    border-radius: 10px;
+    font-size: 18px;
+    color: #23232e;
+    margin-left: 8%;
+    text-align: center;
+}
+
+
+.cadastre {
+    color: #adadad;
+    margin-left: 8%;
+}
+
+.left {
+    background-color: #23232ed9;
+    box-shadow: 5px 10px 40px #23232e;
+    color: ghostwhite;
+    padding-bottom: 10vh;
+
+}
+
+.pa {
+    margin: 40px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    ;
+    color: ghostwhite;
+
+    font-size: large;
+    justify-content: center;
+    text-align: center;
+    text-align: justify;
+    margin-left: 2%;
+}
+
+.h2 {
+    margin: 40px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    ;
+    color: ghostwhite;
+
+    font-size: large;
+    justify-content: center;
+    text-align: center;
+    text-align: justify;
+    margin-right: 8%;
+}
+
+:root {
+    --bg: #222;
+}
+
+.ul {
+    position: relative;
+    display: flex;
+    gap: 40px;
+}
+.ul .li:hover{
+    z-index: 10000;
+    transform: scale(0.75);
+}
+
+.ul .li {
+    position: relative;
+    list-style: none;
+    text-decoration: none;
+    font-style: none;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.ul .li::before {
+    content: '';
+    position: absolute;
+    inset: 20px;
+    box-shadow: 0 0 0 10px var(--clr),
+        0 0 0 20px var(--bg),
+        0 0 0 22px var(--clr);
+    transition: 0.5s;
+}
+.ul .li:hover::before{
+    inset: 0px;
+}
+.ul .li::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--bg);
+    transform: rotate(45deg);
+}
+
+.ul .li .a {
+    text-decoration: none;
+    position: relative;
+    color: var(--clr);
+    z-index: 10;
+    font-size: 2em;
+    transition: 0.5s;
+}
+
+.ul .li:hover .a {
+    font-size: 3em;
+    filter: drop-shadow(0 0 20px var(--clr)) drop-shadow(0 0 40px var(--clr)) drop-shadow(0 0 60px var(--clr));
+}
